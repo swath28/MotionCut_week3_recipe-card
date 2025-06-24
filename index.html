@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Recipe Website</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+        <h1 class="logo">Delicious Recipe</h1>
+        <nav>
+            <div class="menu-icon">&#9776;</div>
+            <ul class="nav-list">
+                <li>Home</li>
+                <li>About</li>
+                <li>Recipes</li>
+                <li>Contact</li>
+            </ul>
+        </nav>
+        </div>
+    </header>
+    <!--........Hero-Section........-->
+    <section class="hero">
+        <div class="hero-section">
+            <h2> Welcome to My Recipe Collection</h2>
+            <p>Search mouth watering recipes to satisfy your craving.</p>
+            <form action="#" class="search-box">
+              <input type="text" placeholder="Search Recipe">
+              <button type="submit">Search</button>
+            </form>
+        </div>
+    </section>
+    <!--........Recipe-Section........-->
+    <section class="recipes">
+        <h1>Featured Recipes</h1>
+        <div class="recipe-section">
+            <div class="recipe-card">
+                <img src="images/dish-1.jpg" alt="">
+                <h2>Strawberry Custard</h2>
+                <p>A creamy dessert made with milk, sugar, and fresh strawberries — sweet and refreshing.</p>
+
+                <div class="details">
+                <ul class="ingredients">
+                  <li>2 cups milk</li>
+                  <li>2 tbsp custard powder</li>
+                  <li>1/4 cup sugar</li>
+                  <li>Fresh chopped strawberries</li>
+                </ul>
+                <div class="preparation">
+                   Mix custard powder with cold milk, boil the rest of the milk with sugar, combine, and chill. Top with strawberries before serving.
+                </div>
+                </div>
+                <a href="javascript:void(0)" class="toggle-btn">View Recipe</a>
+
+            </div>
+            <div class="recipe-card">
+                <img src="images/dish-2.jpg" alt="">
+                <h2>Shakshuka</h2>
+                <p>A spicy Middle Eastern dish of poached eggs in a rich tomato and pepper sauce.</p>
+                <div class="details">
+                <ul class="ingredients">
+                  <li>2 tbsp olive oil</li>
+                  <li>1 onion, chopped</li>
+                  <li>2 garlic cloves, minced</li>
+                  <li>1 red bell pepper, sliced</li>
+                  <li>4 tomatoes, chopped</li>
+                  <li>1 tsp cumin, 1/2 tsp paprika</li>
+                  <li>2-4 eggs</li>
+                </ul>
+                <div class="preparation">
+                     Sauté onion, garlic, and bell pepper in olive oil. Add tomatoes and spices; simmer. Crack eggs into the sauce and cook covered until eggs set.
+                </div>
+                </div>
+                <a href="javascript:void(0)" class="toggle-btn">View Recipe</a>
+
+
+            </div>
+            <div class="recipe-card">
+                <img src="images/dish-3.jpg" alt="">
+                <h2>Chicken Kebabs</h2>
+                <p>Tender, marinated chicken grilled on skewers — juicy, smoky, and full of flavor.</p>
+                <div class="details">
+                <ul class="ingredients">
+                   <li>500g chicken breast, cubed</li>
+                   <li>1/2 cup yogurt</li>
+                   <li>1 tbsp lemon juice</li>
+                   <li>2 garlic cloves, minced</li>
+                   <li>1 tsp cumin, 1/2 tsp chili powder</li>
+                   <li>Salt and pepper</li>
+                </ul>
+                <div class="preparation">
+                    Mix all ingredients and marinate chicken for 2+ hours. Skewer and grill until cooked through and lightly charred.
+                </div>
+                </div>
+                <a href="javascript:void(0)" class="toggle-btn">View Recipe</a>
+
+            </div>
+             <div class="recipe-card">
+                <img src="images/dish-4.jpg" alt="">
+                <h2>Salad</h2>
+                <p>A fresh, colorful mix of veggies tossed with a light, tangy dressing — crisp and healthy.</p>
+                <div class="details">
+                <ul class="ingredients">
+                    <li>1 cup lettuce, chopped</li>
+                    <li>1 cucumber, sliced</li>
+                    <li>1 tomato, diced</li>
+                    <li>1/4 cup red onion, sliced</li>
+                    <li>2 tbsp olive oil</li>
+                    <li>1 tbsp lemon juice</li>
+                    <li>Salt and pepper</li>
+                </ul>
+                <div class="preparation">
+                      Combine all veggies in a bowl. Whisk olive oil, lemon juice, salt, and pepper. Pour dressing over salad and toss well.
+                </div>
+                </div>
+                <a href="javascript:void(0)" class="toggle-btn">View Recipe</a>
+
+
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div>
+            <p>&copy;Swathi Recipe Website</p>
+        </div>
+    </footer>
+    <script>
+  const toggleButtons = document.querySelectorAll('.toggle-btn');
+
+  toggleButtons.forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const card = btn.closest('.recipe-card');
+      card.classList.toggle('show');
+      btn.textContent = card.classList.contains('show') ? 'Hide Recipe' : 'View Recipe';
+    });
+  });
+</script>
+</body>
+</html>
